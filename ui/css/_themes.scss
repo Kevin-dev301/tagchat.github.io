@@ -1,0 +1,68 @@
+//Light Mode
+
+$whiteog: #fff;
+// $whiteog: salmon;
+$white1: #f2f2f2;
+// $white1op: rgba(242, 242, 242,.1);
+$white2: $white1;
+$grey: #f6f6f9;
+$blck: #495057;
+$svggrey: $blck;
+$slightgrey: #797c8c;
+$smallgrey: #f8f9fa;
+$green: #4eac6d;
+$activegreen: #06d6a0;
+$slightgreen: rgba(78, 172, 109, .1);
+$shdw1: 0 2px 4px rgba(15, 34, 58, .12);
+$shdw2: 0 10px 20px -21px var(--svgrey);
+$shdw2inv: 0 -10px 20px -21px var(--svgrey);
+
+:root{
+    --white: #{$whiteog};
+    --white1: #{$white1};
+    // --white1op: #{$white1op};
+    --white2: #{$white2};
+    --grey: #{$grey};
+    --blck: #{$blck};
+    --svgrey: #{$svggrey};
+    --slightgrey: #{$slightgrey};
+    --smallgrey: #{$smallgrey};
+    --green: #{$green};
+    --activegreen: #{$activegreen};
+    --slightgreen: #{$slightgreen};
+}
+
+
+//Dark Mode
+.dark{
+    $white1dark: #2e2e2e;
+    // $white1opdark: rgba(46, 46, 46,.5);
+    $white2dark: #272727;
+    $greydark: $white1dark;
+    $blckdark: #adb5bd;
+    $svggreydark: #aaacb4;
+    $slightgreydark: $blckdark;
+    $smallgreydark: #383838;
+    $greendark: #4eac6d;
+    $activegreendark: #06d6a0;
+    $slightgreendark: rgb(78, 172, 109);
+
+    --white: #{$white2dark};
+    --white1: #{$white1dark};
+    // --white1op: #{$white1opdark};
+    --white2: #{$white1dark};
+    --grey: #{$greydark};
+    --blck: #{$blckdark};
+    --svgrey: #{$svggreydark};
+    --slightgrey: #{$slightgreydark};
+    --smallgrey: #{$smallgreydark};
+    --green: #{$green};
+    --activegreen: #{$activegreen};
+    --slightgreen: #{$slightgreen};
+}
+
+/*
+    white1: top-of-right-page
+    smallgrey: profile-abs-hover
+    svggrey: grey-clr-for-svgs
+*/

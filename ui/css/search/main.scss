@@ -1,0 +1,41 @@
+@import "../var";
+
+svg,
+img {
+    width: 30px;
+    height: 30px;
+}
+
+@include nav;
+@include peoplebar;
+$profile-pad: 20px;
+
+body {
+    display: grid;
+    grid-template-columns: 5% 22% 73%;
+    position: relative;
+
+    @media(max-width: 981px) {
+        grid-template-columns: 100%;
+    }
+    @include friend-common;
+    .friends-ui{
+        .friends-bottom{
+            position: relative;
+            ul[class=search-cards] {
+                li{
+                    display: none;
+                }
+            }
+            .demo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: $f16;
+                color: var(--blck);
+                font-weight: $fw600;
+            }
+        }
+    }
+}

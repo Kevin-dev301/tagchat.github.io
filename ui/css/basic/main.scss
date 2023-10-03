@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import "../var";
+body{
+    padding: 2rem;
+    background: $themegreen;
+    overflow: visible;
+
+    h3{
+        font-size: 25px;
+        // font-family: poppins;
+        font-family: $font;
+        font-weight: 600;
+    }
+    .main{
+        height: 100vh;
+        @media(max-height: 700px){
+            height: unset;
+        }
+        @media(max-width: 987px){
+            height: unset;
+        }
+        .main-cont{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            @media(max-width: 987px){
+                display: flex;
+                flex-direction: column;
+            }
+            .main-cont-left{
+                position: relative;
+                @media(max-width: 987px){
+                    padding: 2.5rem 0;
+                    display: flex;
+                    justify-content: center;
+                }
+                .logo{
+                    .logo-main{
+                        display: flex;
+                        align-items: center;
+                        @media(max-width: 987px) {
+                            justify-content: center;
+                        }
+                        svg {
+                            margin-right: 10px;
+                            width: 40px;
+                            height: 40px;
+                            fill: $white;
+                        }
+                        
+                        h3 {
+                            color: $white;
+                            font-size: 35px;
+                        }
+                    }
+                    p{
+                        font-family: $font;
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: $whitegrey;
+                    }
+                }
+                .abs-img{
+                    position: absolute;
+                    width: 550px;
+                    height: 400px;
+                    bottom: 0;
+                    @media(max-width: 987px){
+                        display: none;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .main-cont-right{
+                background: $white;
+                height: 100vh;
+                min-height: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 16px;
+                padding: 100px 30px;
+                margin-bottom: 2rem;
+                @media(max-height: 700px){
+                    height: unset;
+                }
+                @media(max-width: 987px){
+                    height: unset;
+                    padding: 40px 30px;
+                }
+                .main-cont-right-cnt{
+                    // padding: 50px 0;
+                    width: 43%;
+                    @media(max-width: 1368px){
+                        width: 70%;
+                    }
+                    @media(max-width: 638px){
+                        width: 100%;
+                        padding: 20px 0;
+                    }
+                    h3{
+                        text-align: center;
+                        color: $clrblack;
+                    }
+                    p{
+                        text-align: center;
+                        font-family: $font; 
+                        font-size: 15px;
+                        color: $clrblack;
+                        font-weight: 500;
+                    }
+                    .notice{
+                        padding: 12px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 6px;
+                        background: $lightblue;
+                        p{
+                            color: $drkblue;
+                            width: 90%;
+                            margin: unset;
+                        }
+                    }
+                    form{
+                        margin-top: 40px;
+                        label{
+                            font-family: $font;
+                            font-size: 15px;
+                            display: flex;
+                            justify-content: space-between;
+                            font-weight: 500;
+                            color: $clrblack;
+                            a{
+                                color: $clrgrey;
+                                &:hover{
+                                    color: $themegreen;
+                                }
+                            }
+                        }
+                        .form-crd{
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 18px;
+                            label{
+                                margin-bottom: 10px;
+                            }
+                            input,select{
+                                padding: 9px 16px;
+                                border-radius: 4px;
+                                border: none;
+                                font-size: 14px;
+                                font-family: $font;
+                                border: 1px solid $whitegrey;
+                                outline: none;
+                                background: transparent;
+                                width: 100%;
+                            }
+                        }
+                        .form-crd-part{
+                            display: grid;
+                            grid-template-columns: 49.1% 49.1%;
+                            justify-content: space-between;
+                        }
+                        .check{
+                            display: flex;
+                            align-items: center;
+                            label{
+                                margin-left: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                        button{
+                            margin: 20px 0;
+                            display: flex;
+                            width: 100%;
+                            padding: 14px 0;
+                            border-radius: 4px;
+                            justify-content: center;
+                            font-family: $font;
+                            border: none;
+                            font-size: 14px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            color: $white;
+                            background: $themegreen;
+                        }
+                    }
+                    .checkouts{
+                        margin-bottom: 30px;
+                        .checkouts-header{
+                            display: grid;
+                            grid-template-columns: calc(100%/3) auto calc(100%/3);
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            hr{
+                                display: flex;
+                                height: 1px;
+                                border: none;
+                                background: $whitegrey;
+                            }
+                            font-family: $font;
+                            font-size: 15px;
+                            color: $clrblack;
+                            font-weight: 500;
+                        }
+                        .checkout-btns{
+                            display: grid;
+                            grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+                            justify-content: space-between;
+                            @media(max-width: 469px) {
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 10px;
+                            }
+                            a{
+                                background: $unclearwhite;
+                                color: $clrblack;
+                                transition: $trans;
+                                padding: 10px;
+                                border-radius: 4px;
+                                display: flex;
+                                justify-content: center;
+                                font-family: $font;
+                                font-size: 14px;
+                                font-weight: 500;
+                                align-items: center;
+                                text-decoration: none;
+                                &:hover{
+                                    background: $themegreen;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                    p{
+                        margin-bottom: 20px;
+                        a{
+                            color: $themegreen;
+                        }
+                    }
+                    .copy{
+                        font-family: $font;
+                        display: flex;
+                        justify-content: center;
+                        margin: 30px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
